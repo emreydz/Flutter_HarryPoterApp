@@ -12,7 +12,7 @@ class CharactersPage extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            title: const AppText(
+            title: const CustomText(
               title: 'Characters',
               fontSize: 24,
               fontWeight: FontWeight.bold,
@@ -27,12 +27,12 @@ class CharactersPage extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final character = state.characters[index];
                     return ListTile(
-                      title: AppText(
+                      title: CustomText(
                         title: character.name!,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
-                      subtitle: AppText(
+                      subtitle: CustomText(
                         title: character.house!,
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
