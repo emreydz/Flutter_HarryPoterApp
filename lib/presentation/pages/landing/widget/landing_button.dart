@@ -11,7 +11,7 @@ class LandingButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomAppButton(
         onPressed: () {
-          context.go(context.namedLocation("Characters"));
+          context.go(context.namedLocation("home"));
         },
         height: 56,
         width: 327,

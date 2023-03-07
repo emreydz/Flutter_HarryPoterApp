@@ -21,6 +21,13 @@ class AppRouter {
           return const CharactersPage();
         },
       ),
+      GoRoute(
+        path: '/home',
+        name: "home",
+        builder: (context, state) {
+          return const HomePage();
+        },
+      ),
     ],
   );
 }
