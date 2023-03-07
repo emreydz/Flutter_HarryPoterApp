@@ -14,20 +14,20 @@ class HomePageBody extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(
-            height: 20,
+            height: 50,
           ),
           Row(
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               SchoolCardImage(
                   ontap: () {
-                    context.go(context.namedLocation("home"));
+                    context.go(context.namedLocation("gryffindor"));
                   },
                   img: "assets/images/Gryffindor.png",
                   title: "Gryffindor"),
               SchoolCardImage(
                   ontap: () {
-                    context.go(context.namedLocation("home"));
+                    context.go(context.namedLocation("slytherin"));
                   },
                   img: "assets/images/slytherin.png",
                   title: "Slytherin")
@@ -38,13 +38,13 @@ class HomePageBody extends StatelessWidget {
             children: [
               SchoolCardImage(
                   ontap: () {
-                    context.go(context.namedLocation("home"));
+                    context.go(context.namedLocation("hufflepuff"));
                   },
                   img: "assets/images/hufflepuff.png",
                   title: "Hufflepuff"),
               SchoolCardImage(
                 ontap: () {
-                  context.go(context.namedLocation("home"));
+                  context.go(context.namedLocation("ravenclaw"));
                 },
                 img: "assets/images/ravenclaw.png",
                 title: "Ravenclaw",
