@@ -28,7 +28,7 @@ class SchoolCardImage extends StatelessWidget {
               ),
               color: Colors.amber,
             ),
-            width: 200,
+            width: 185,
             height: 250,
           ),
         ),

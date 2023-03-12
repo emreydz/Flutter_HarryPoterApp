@@ -4,4 +4,6 @@ import 'package:harry_poter_app/domain/spells/spells_model.dart';
 
 abstract class ICharactersService {
   Future<List<dynamic>> getCharacters();
+
+  Future<List<dynamic>> getHause(String name);
 }

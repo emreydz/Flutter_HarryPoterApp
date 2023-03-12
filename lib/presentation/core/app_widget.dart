@@ -10,8 +10,12 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AppRouter _router = getIt<AppRouter>();
-    return BlocProvider(
-      create: (context) => CharactersCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => CharactersCubit(),
+        ),
+      ],
       child: MaterialApp.router(
         title: 'Harry Potter App',
         debugShowCheckedModeBanner: false,
