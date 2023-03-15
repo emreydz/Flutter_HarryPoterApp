@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:harry_poter_app/presentation/pages/character/widget/characters_page_body.dart';
+import 'package:harry_poter_app/presentation/pages/spells/widget/spells_page_body.dart';
 
-class CharactersPage extends StatelessWidget {
-  const CharactersPage({super.key});
+class SpellsPage extends StatelessWidget {
+  const SpellsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.amber,
         appBar: homeAppbar(),
-        body: CharactersPageBody());
+        body: SpellsPageBody());
   }
 
   AppBar homeAppbar() {
@@ -27,7 +27,7 @@ class CharactersPage extends StatelessWidget {
             )),
       ),
       title: const Text(
-        "Characters",
+        "Spells",
         style: TextStyle(
           color: Colors.black,
           fontSize: 30,

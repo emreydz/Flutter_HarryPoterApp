@@ -11,11 +11,4 @@ class CharactersService implements ICharactersService {
         await Dio().get('https://hp-api.onrender.com/api/characters');
     return response.data;
   }
-
-  @override
-  Future<List> getHause(String name) async {
-    final response = await Dio()
-        .get('https://hp-api.onrender.com/api/characters/house/$name');
-    return response.data;
-  }
 }

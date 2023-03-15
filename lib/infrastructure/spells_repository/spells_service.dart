@@ -6,7 +6,7 @@ import 'package:injectable/injectable.dart';
 @LazySingleton(as: ISpellsService)
 class SpellsService implements ISpellsService {
   @override
-  Future<List<SpellsModel>> getSpells() async {
+  Future<List> getSpells() async {
     final response = await Dio().get('https://hp-api.onrender.com/api/spells');
     return response.data;
   }

@@ -1,42 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:harry_poter_app/presentation/common_widget.dart/custom_text.dart';
-import 'package:harry_poter_app/presentation/common_widget.dart/school_card_image.dart';
-import 'package:harry_poter_app/presentation/pages/home/widget/home_page_body.dart';
+import 'package:harry_poter_app/presentation/pages/character/characters_page.dart';
+import 'package:harry_poter_app/presentation/pages/spells/spells_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.amber,
-        appBar: homeAppbar(),
-        body: HomePageBody());
-  }
-
-  AppBar homeAppbar() {
-    return AppBar(
-      backgroundColor: Colors.amber,
-      elevation: 0,
-      leading: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: SizedBox(
-            height: 75,
-            width: 75,
-            child: Image.asset(
-              "assets/images/HogwartsLogo.png",
-              fit: BoxFit.cover,
-            )),
-      ),
-      title: const Text(
-        "Home",
-        style: TextStyle(
-          color: Colors.black,
-          fontSize: 30,
-          fontWeight: FontWeight.w700,
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          bottom: TabBar(
+            tabs: [
+              Tab(
+                  child: SizedBox(
+                child: Image.asset("assets/images/harrypotter.jpg",
+                    fit: BoxFit.cover),
+              )),
+              Tab(
+                  child: SizedBox(
+                child: Image.asset("assets/images/landing.webp",
+                    fit: BoxFit.cover),
+              )),
+            ],
+          ),
+        ),
+        body: const TabBarView(
+          children: [CharactersPage(), SpellsPage()],
         ),
       ),
-      centerTitle: true,
     );
   }
 }

@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:harry_poter_app/presentation/pages/character/characters_page.dart';
 import 'package:harry_poter_app/presentation/pages/home/home_page.dart';
+import 'package:harry_poter_app/presentation/pages/spells/spells_page.dart';
 import 'package:harry_poter_app/presentation/pages/landing/landing_page.dart';
 
 class AppRouter {
@@ -15,6 +17,13 @@ class AppRouter {
         },
       ),
       GoRoute(
+        path: '/home',
+        name: "home",
+        builder: (context, state) {
+          return const HomePage();
+        },
+      ),
+      GoRoute(
         path: '/characters',
         name: "characters",
         builder: (context, state) {
@@ -22,10 +31,10 @@ class AppRouter {
         },
       ),
       GoRoute(
-        path: '/home',
-        name: "home",
+        path: '/spells',
+        name: "spells",
         builder: (context, state) {
-          return const HomePage();
+          return const SpellsPage();
         },
       ),
     ],
